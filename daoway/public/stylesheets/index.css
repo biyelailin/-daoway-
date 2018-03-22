@@ -1,0 +1,312 @@
+#app {
+  width: 100%;
+  position: relative;
+}
+#app .header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+#app .header .container {
+  width: 85%;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+#app .header .container .dizhi > span {
+  font-size: 16px;
+  font-weight: bold;
+}
+#app .header .container .dizhi .icon {
+  margin-right: 10px;
+  font-weight: bold;
+}
+#app .header .container .dizhi .icon > span {
+  font-weight: bold;
+}
+#app .header .container .dizhi .icon .iconfont {
+  color: red;
+  font-weight: bold;
+}
+#app .header .container .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#app .header .container .nav > a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #000;
+  font-weight: bold;
+}
+#app .header .container .nav > a:hover {
+  color: red;
+}
+#app .header .container .nav .show {
+  background: red;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+#app .header .container .nav .show:hover {
+  color: #ffffff;
+}
+#app .fix {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#app .anima {
+  transform: rotateX(360deg);
+  transition: 1s transform ease-in-out;
+  transform-origin: 0 0;
+}
+#app .lunbo {
+  position: relative;
+}
+#app .lunbo #box {
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
+}
+#app .lunbo #box .box_container .box1 {
+  background: url("../images/banner1.jpg") no-repeat center center;
+}
+#app .lunbo #box .box_container .box2 {
+  background: url("../images/banner2.jpg") no-repeat center center;
+}
+#app .lunbo #box .box_container .box3 {
+  background: url("../images/banner3.jpg") no-repeat center center;
+}
+#app .lunbo .list {
+  width: 180px;
+  height: 420px;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  z-index: 10;
+}
+#app .lunbo .list > li {
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 16px;
+  background: #757881;
+}
+#app .lunbo .list > li:hover .jiantou{
+  width:0;
+  height:0;
+  border:7px solid transparent;
+  border-right:7px solid rgba(255,255,255,0.8);
+  position:absolute;
+  right:0;
+  top:12px;
+
+}
+#app .lunbo .list>li:hover{
+  background: #000;
+
+
+}
+#app .lunbo .list > li .hide {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 160px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+#app .lunbo .list > li .hide > li {
+  height: 42px;
+  line-height: 42px;
+}
+#app .lunbo .list > li .hide > li > a {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+#app .lunbo .list > li .hide > li > a:hover {
+  color: red;
+}
+#app .lunbo .list > li > a {
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+#app .lunbo .list > li .iconfont {
+  color: #ffffff;
+  font-size: 16px;
+}
+#app .content {
+  width: 100%;
+}
+#app .content .item {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 30px;
+  padding: 50px 6% 0 6%;
+  box-sizing: border-box;
+}
+#app .content .item .title {
+  font-weight: bold;
+}
+#app .content .item .content_list {
+  position: relative;
+  font-size: 19px;
+  margin: 20px 20px;
+}
+#app .content .item .content_list > a {
+  color: #000000;
+}
+#app .content .item .content_list .fuwu {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#app .content .item .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .content .item .list .list_one {
+  width: 210px;
+  height: 315px;
+  padding: 5px;
+  border: 1px solid #eaeaea;
+  background: #ffffff;
+}
+#app .content .item .list .list_one > img {
+  width: 100%;
+}
+#app .content .item .list .list_one h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+}
+#app .content .item .list .list_one p {
+  font-size: 12px;
+  color: #929292;
+  text-align: left;
+  margin: 10px  0;
+}
+#app .content .item .list .list_one .price {
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .content .item .list .list_one .price > span {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+#app .content .item .list .list_one .price > span .one {
+  font-size: 18px;
+  font-weight: bold;
+}
+#app .content .item .list .list_one .price > span .two {
+  font-size: 14px;
+  font-weight: bold;
+}
+#app .content .item .list .list_one .price .dianji {
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  background: red;
+}
+#app .content .item .list .list_one:hover {
+  box-shadow: 5px 5px 15px #ccc;
+}
+#app .baozhang {
+  padding-top: 60px;
+}
+#app .baozhang h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#app .baozhang h2 > span {
+  color: red;
+  font-weight: bold;
+}
+#app .baozhang p {
+  font-size: 22px;
+  text-align: center;
+  color: #3d3838;
+  margin: 20px 0;
+}
+#app .baozhang .safe {
+  color: #1d1515;
+  font-size: 18px;
+  text-align: center;
+}
+#app .baozhang .safe > a {
+  color: #000000;
+  margin: 0 10px;
+}
+#app .baozhang .safe > a .icon-tongguo {
+  color: green;
+  margin-right: 10px;
+}
+#app .baozhang .footer {
+  padding: 0 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+#app .baozhang > span {
+  width: 10%;
+  font-weight: bold;
+}
+#app .baozhang .desc1 {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#app .baozhang .desc1 > a {
+  width: 9%;
+  font-size: 16px;
+  color: #898989;
+  margin: 10px 0;
+}
+#app .dibu {
+  padding: 0 80px;
+  background: #fbf8f8;
+  padding-top: 30px;
+}
+#app .dibu h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+#app .dibu .img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 98%;
+  margin: 30px 0 10px 0;
+}
+#app .dibu .img > a {
+  display: block;
+  width: 110px;
+  height: 50px;
+  padding: 5px;
+  background: #ffffff;
+  margin-top: 10px;
+}
+#app .dibu .img > a > img {
+  width: 100%;
+}
+#app .dibu > p {
+  color: #898989;
+  font-size: 14px;
+}

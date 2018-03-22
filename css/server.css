@@ -1,0 +1,211 @@
+.server {
+  width: 100%;
+  background: #fbf8f8;
+}
+.server .header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.server .header .container {
+  width: 85%;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+.server .header .container .dizhi > span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.server .header .container .dizhi .icon {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.server .header .container .dizhi .icon > span {
+  font-weight: bold;
+}
+.server .header .container .dizhi .icon .iconfont {
+  color: red;
+  font-weight: bold;
+}
+.server .header .container .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.server .header .container .nav > a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #000;
+  font-weight: bold;
+}
+.server .header .container .nav > a:hover {
+  color: red;
+}
+.server .header .container .nav .show {
+  background: red;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.server .header .container .nav .show:hover {
+  color: #ffffff;
+}
+.server .fix {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.server h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding-left: 85px;
+  box-sizing: border-box;
+}
+.server .content {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.server .content .content_left {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.server .content .content_left .list_one {
+  width: 200px;
+  height: 270px;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  background: #ffffff;
+  margin-bottom: 10px;
+}
+.server .content .content_left .list_one > img {
+  width: 100%;
+}
+.server .content .content_left .list_one .title {
+  margin: 15px 0;
+}
+.server .content .content_left .list_one .title > span {
+  color: #929292;
+  margin-right: 10px;
+}
+.server .content .content_left .list_one .title b {
+  font-weight: bold;
+}
+.server .content .content_left .list_one p {
+  font-size: 13px;
+  color: #929292;
+  display: flex;
+  justify-content: space-between;
+}
+.server .content .content_left .list_one:hover {
+  box-shadow: 5px 5px 15px #ccc;
+}
+.server .content .content_right {
+  width: 20%;
+}
+.server .content .content_right .left_img1 {
+  display: block;
+  margin-bottom: 12px;
+  width: 230px;
+  height: 290px;
+}
+.server .content .content_right .left_img1 > img {
+  display: block;
+  width: 97%;
+}
+.server .content .content_right .left_img2 {
+  width: 230px;
+  height: 290px;
+  background: url("../images/erweima2.jpg") no-repeat;
+  position: relative;
+  background-size: 97%;
+}
+.server .content .content_right .left_img2 > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -72%);
+  width: 60%;
+}
+.server .lazy_img {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e5e5e5;
+  font-size: 16px;
+  display: block;
+  margin: 50px auto;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #b1b1b1;
+  background: #ffffff;
+}
+.server .baozhang {
+  padding-top: 60px;
+  background: #ffffff;
+}
+.server .baozhang h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.server .baozhang h2 > span {
+  color: red;
+  font-weight: bold;
+}
+.server .baozhang p {
+  font-size: 22px;
+  text-align: center;
+  color: #3d3838;
+  margin: 20px 0;
+}
+.server .baozhang .safe {
+  color: #1d1515;
+  font-size: 18px;
+  text-align: center;
+}
+.server .baozhang .safe > a {
+  color: #000000;
+  margin: 0 10px;
+}
+.server .baozhang .safe > a .icon-tongguo {
+  color: green;
+  margin-right: 10px;
+}
+.server .baozhang .footer {
+  padding: 0 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.server .baozhang > span {
+  width: 10%;
+  font-weight: bold;
+}
+.server .baozhang .desc {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.server .baozhang .desc > a {
+  width: 9%;
+  font-size: 16px;
+  color: #898989;
+  margin: 10px 0;
+}
+.server .bao_footer {
+  color: #898989;
+  padding: 0 80px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 15px 0;
+}

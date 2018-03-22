@@ -1,0 +1,226 @@
+.server{
+  width:100%;
+  background: #fbf8f8;
+  .header{
+    width : 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    .container{
+      width:85%;
+      height:65px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      white-space: nowrap;
+      .dizhi{
+        >span{
+          font-size:16px;
+          font-weight: bold;
+        }
+        .icon{
+          margin-right:10px;
+          font-weight:bold;
+          >span{
+            font-weight:bold;
+          }
+          .iconfont{
+            color:red;
+            font-weight:bold;
+          }
+        }
+      }
+      .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        >a{
+          text-decoration: none;
+          margin-right:20px;
+          color:#000;
+          font-weight:bold;
+        }
+        >a:hover{
+          color:red;
+        }
+        .show{
+          background: red;
+          color:#ffffff;
+          padding:5px;
+          border-radius: 5px;
+        }
+        .show:hover{
+          color:#ffffff;
+        }
+      }
+    }
+
+  }
+  .fix{
+    position:fixed;
+    top:0;
+    z-index: 100;
+
+  }
+   h3{
+    font-size:18px;
+    font-weight: bold;
+    margin:20px 0;
+    padding-left:85px;
+    box-sizing: border-box;
+  }
+  .content {
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    .content_left {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+        .list_one {
+          width: 200px;
+          height: 270px;
+          padding: 10px;
+          border: 1px solid #eaeaea;
+          background: #ffffff;
+          margin-bottom: 10px;
+          > img {
+            width: 100%;
+          }
+          .title {
+            margin: 15px 0;
+            > span {
+              color: #929292;
+              margin-right: 10px;
+            }
+            b {
+              font-weight: bold;
+            }
+          }
+          p {
+            font-size: 13px;
+            color: #929292;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .list_one:hover {
+          box-shadow: 5px 5px 15px #ccc;
+        }
+
+
+    }
+    .content_right {
+      width: 20%;
+      .left_img1 {
+        display: block;
+        margin-bottom: 12px;
+        width:230px;
+        height:290px;
+        > img {
+          display: block;
+          width: 97%;
+        }
+      }
+      .left_img2 {
+        width:230px;
+        height:290px;
+        background: url("../images/erweima2.jpg") no-repeat;
+        position: relative;
+        background-size:97%;
+        >img{
+          position: absolute;
+          left: 50%;
+          top:50%;
+          transform: translate(-52%,-72%);
+          width:60%;
+        }
+      }
+
+    }
+
+
+  }
+  .lazy_img {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+    display: block;
+    margin: 50px auto;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #b1b1b1;
+    background: #ffffff;
+
+  }
+  .baozhang {
+    padding-top: 60px;
+    background: #ffffff;
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      > span {
+        color: red;
+        font-weight: bold;
+      }
+
+    }
+    p {
+      font-size: 22px;
+      text-align: center;
+      color: #3d3838;
+      margin: 20px 0;
+    }
+    .safe {
+      color: #1d1515;
+      font-size: 18px;;
+      text-align: center;
+      > a {
+        color: #000000;
+        margin: 0 10px;
+        .icon-tongguo {
+          color: green;
+          margin-right: 10px;
+        }
+      }
+
+    }
+    .footer {
+      padding: 0 80px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    > span {
+      width: 10%;
+      font-weight: bold;
+    }
+    .desc {
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      > a {
+        width: 9%;
+        font-size: 16px;
+        color: #898989;
+        margin: 10px 0;
+      }
+    }
+
+  }
+  .bao_footer {
+    color: #898989;
+    padding: 0 80px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+}

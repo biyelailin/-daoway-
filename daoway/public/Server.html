@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./stylesheets/server.css">
+  <link rel="stylesheet" href="./stylesheets/reset.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_596186_ac1yrzpp3qnf80k9.css">
+  <script type="text/javascript" src="./javascripts/jquery-1.10.1.js"></script>
+  <script type="text/javascript" src="./javascripts/template-web.js"></script>
+</head>
+<body>
+<div class="server">
+  <div class="header">
+    <div class="container">
+      <a href="javascript:;" class="logo">
+        <img src="./images/logo.png" >
+      </a>
+      <div class="dizhi">
+         <span class="icon">
+         <span class="iconfont icon-dizhi "></span>
+           <span>北京</span>
+           </span>
+        <span>切换城市</span>
+      </div>
+      <div class="nav">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">到位APP</a>
+        <a href="javascript:;">服务商</a>
+        <a href="javascript:;">商家入驻</a>
+        <a href="javascript:;">风云APP</a>
+        <a href="javascript:;">关于我们 </a>
+        <a href="javascript:;" class="show">商家登录</a>
+      </div>
+    </div>
+  </div>
+  <h3>服务商</h3>
+  <div class="content">
+    <ul class="content_left">
+
+    </ul>
+    <div class="content_right">
+    <a href="javascript:;" class="left_img1">
+      <img src="./images/server.jpg" >
+    </a>
+    <div class="left_img2">
+      <img src="./images/daowayApp%20(1).png" alt="">
+    </div>
+    </div>
+  </div>
+  <button class="lazy_img">查看等多商家 <span class="iconfont icon-xiala"></span></button>
+  <!--服务到家-->
+  <div class="baozhang">
+    <h2>到位<span>服务</span>保障</h2>
+    <p>到位平台担保交易安全，交易未成功100%退款</p>
+    <div class="safe">
+      <a href="javascript:;">
+        <span class="iconfont icon-tongguo"></span>优选服务</a>
+      <a href="javascript:;">
+        <span class="iconfont icon-tongguo"></span>全程保障</a>
+      <a href="javascript:;">
+        <span class="iconfont icon-tongguo"></span>安全无忧</a>
+    </div>
+    <div class="footer">
+      <span>热门城市</span>
+      <div class="desc1">
+
+
+      </div>
+
+    </div>
+
+  </div>
+  <p class="bao_footer">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
+
+</div>
+<script type="text/javascript">
+  $(function(){
+    //头部滑动显示
+    // 获取显示的位置
+    var top = $('.container').offset().top
+    console.log(top)
+//   获取滚动条的高度
+    $(window).scroll(function(){
+      var scrllTop = $(window).scrollTop()
+      if(scrllTop>top ){
+        $(".header").addClass('fix')
+      } else{
+        $(".header").removeClass('fix')
+      }
+    })
+// 发送ajax请求
+    $.get('/service',function(data){
+      $('.content_left').append(template('data',{data:data}))
+
+    })
+//发送城市ajax请求
+    $.get('/city',function(data){
+      $('.desc1').append(template('footer',{data:data}))
+    })
+//通过点击实现加载图片
+/*1.获得所有的数据，要进行判断，第一次显示多少
+*2.点击以后显示第二屏数据
+* */
+
+
+  })
+</script>
+<script type="text/html" id="data">
+  {{each data}}
+  <li class="list_one">
+    <img src={{$value.imgUrl}} >
+    <div class="title">
+    <span class="iconfont icon-zhuyecanting"></span><b>{{$value.title}}</b>
+    </div>
+    <p>
+    <span>已接单{{$value.orderCount}}单</span>
+    <span>好评{{$value.positiveRate}}</span>
+    </p>
+    </li>
+  {{/each}}
+
+</script>
+
+<script type="text/html" id="footer">
+
+
+    {{each data}}
+    <a href="javascript:;">{{$value.name}}</a>
+    {{/each}}
+
+
+
+</script>
+
+</body>
+</html>

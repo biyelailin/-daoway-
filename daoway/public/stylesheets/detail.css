@@ -1,0 +1,382 @@
+.detail {
+  width: 100%;
+  background: #fbf8f8;
+}
+.detail .header {
+  width: 100%;
+  background: #ffffff;
+}
+.detail .header .container {
+  width: 85%;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+.detail .header .container .dizhi > span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.detail .header .container .dizhi .icon {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.detail .header .container .dizhi .icon > span {
+  font-weight: bold;
+}
+.detail .header .container .dizhi .icon .iconfont {
+  color: red;
+  font-weight: bold;
+}
+.detail .header .container .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.detail .header .container .nav > a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #000;
+  font-weight: bold;
+}
+.detail .header .container .nav > a:hover {
+  color: red;
+}
+.detail .header .container .nav .show {
+  background: red;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.detail .header .container .nav .show:hover {
+  color: #ffffff;
+}
+.detail .name {
+  height: 140px;
+  padding: 0 80px;
+  box-sizing: border-box;
+  line-height: 140px;
+  overflow: hidden;
+}
+.detail .name .name_left {
+  float: left;
+}
+.detail .name .name_left > b {
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.detail .name .name_left .one {
+  color: #929292;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.detail .name .name_left .one .time {
+  color: #000;
+  margin-left: 5px;
+}
+.detail .name .name_left .two {
+  color: #929292;
+  font-size: 14px;
+}
+.detail .name .name_left .two .month {
+  color: red;
+  margin-left: 5px;
+}
+.detail .name .htit-right {
+  float: right;
+  height: 120px;
+  margin-top: 15px;
+}
+.detail .name .htit-right li {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  line-height: 22px;
+  margin-top: 48px;
+}
+.detail .name .htit-right li i {
+  display: block;
+  color: #e84b47;
+}
+.detail .name .htit-right li span {
+  position: relative;
+  bottom: 12px;
+  left: 20px;
+  color: #e5e5e5;
+}
+.detail .list {
+  padding: 0 80px;
+  box-sizing: border-box;
+  background: #000000;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.detail .list > a {
+  display: inline-block;
+  width: 140px;
+  color: #fff;
+}
+.detail .content {
+  width: 100%;
+  padding: 0 80px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.detail .content .content_left {
+  width: 80%;
+}
+.detail .content .content_left .one {
+  padding: 25px;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-right: 10px;
+}
+.detail .content .content_left .one h3 {
+  border-bottom: 1px solid #e5e5e5 ;
+  margin: 10px 0;
+}
+.detail .content .content_left .one h3 > span {
+  font-size: 16px;
+  display: inline-block;
+  border-bottom: 4px solid red;
+  padding-bottom: 10px;
+}
+.detail .content .content_left .one .desc {
+  overflow: hidden;
+}
+.detail .content .content_left .one .desc > img {
+  float: left;
+  width: 150px;
+  padding: 10px;
+}
+.detail .content .content_left .one .desc .right {
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+}
+.detail .content .content_left .one .desc .right h4 {
+  font-size: 18px;
+  color: #1d1515;
+}
+.detail .content .content_left .one .desc .right p {
+  line-height: 42px;
+  height: 42px;
+  color: #929292;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.detail .content .content_left .one .desc .right .dibu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail .content .content_left .one .desc .right .dibu .left .one {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fc545e;
+  font-weight: bold;
+}
+.detail .content .content_left .one .desc .right .dibu .left .one .price {
+  font-size: 30px;
+}
+.detail .content .content_left .one .desc .right .dibu .left .one .yuanjia {
+  color: #898989;
+}
+.detail .content .content_left .jianshao {
+  padding: 25px;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 70px;
+  margin-right: 10px;
+}
+.detail .content .content_left .jianshao h3 {
+  border-bottom: 1px solid #e5e5e5 ;
+  margin: 10px 0;
+}
+.detail .content .content_left .jianshao h3 > span {
+  font-size: 16px;
+  display: inline-block;
+  border-bottom: 4px solid red;
+  padding-bottom: 10px;
+}
+.detail .content .content_left .jianshao h4 {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.detail .content .content_left .jianshao p {
+  line-height: 28px;
+  margin: 10px 0 25px 0;
+  font-size: 16px;
+}
+.detail .content .content_left .pingjia {
+  padding: 25px;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-top: 10px;
+}
+.detail .content .content_left .pingjia h3 {
+  border-bottom: 1px solid #e5e5e5 ;
+  margin: 10px 0;
+}
+.detail .content .content_left .pingjia h3 > span {
+  font-size: 16px;
+  display: inline-block;
+  border-bottom: 4px solid red;
+  padding-bottom: 10px;
+}
+.detail .content .content_left .pingjia .conmentss {
+  width: 96%;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 3%;
+  padding-top: 20px;
+}
+.detail .content .content_left .pingjia .conmentss .touxiang {
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: top;
+}
+.detail .content .content_left .pingjia .conmentss > ul {
+  display: inline-block;
+  margin-left: 20px;
+  width: 92%;
+}
+.detail .content .content_left .pingjia .conmentss > ul > li {
+  border: none;
+  width: auto;
+  height: auto;
+  display: block;
+  float: none;
+  padding: 0;
+  line-height: 28px;
+  margin: 0;
+}
+.detail .content .content_left .pingjia .conmentss > ul > li > span .icon-star {
+  color: yellow;
+}
+.detail .content .content_right {
+  width: 20%;
+}
+.detail .content .content_right .left_img2 {
+  width: 230px;
+  height: 290px;
+  background: url("../images/erweima2.jpg") no-repeat;
+  position: relative;
+  background-size: 97%;
+}
+.detail .content .content_right .left_img2 > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -72%);
+  width: 60%;
+}
+.detail .content .content_right .left_img1 {
+  width: 230px;
+  height: 290px;
+  background: url("../images/weixin.jpg") no-repeat;
+  position: relative;
+  background-size: 97%;
+}
+.detail .content .content_right .left_img1 > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -72%);
+  width: 60%;
+}
+.detail .content .dibu {
+  width: 100%;
+  text-align: center;
+}
+.detail .content .dibu .fenye {
+  background: #ffffff;
+  display: block;
+  padding: 30px 0;
+}
+.detail .content .dibu .fenye .ye {
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+  font-size: 14px;
+}
+.detail .content .dibu .fenye .shuzu > a {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #121212;
+  border: 1px solid #e5e5e5;
+  margin: 5px;
+}
+.detail .content .dibu .fenye .shuzu .on {
+  background: red;
+}
+.detail .baozhang {
+  padding-top: 60px;
+  background: #ffffff;
+  margin-top: 30px;
+}
+.detail .baozhang h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.detail .baozhang h2 > span {
+  color: red;
+  font-weight: bold;
+}
+.detail .baozhang p {
+  font-size: 22px;
+  text-align: center;
+  color: #3d3838;
+  margin: 20px 0;
+}
+.detail .baozhang .safe {
+  color: #1d1515;
+  font-size: 18px;
+  text-align: center;
+}
+.detail .baozhang .safe > a {
+  color: #000000;
+  margin: 0 10px;
+}
+.detail .baozhang .safe > a .icon-tongguo {
+  color: green;
+  margin-right: 10px;
+}
+.detail .baozhang .footer {
+  padding: 0 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.detail .baozhang > span {
+  width: 10%;
+  font-weight: bold;
+}
+.detail .baozhang .desc1 {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.detail .baozhang .desc1 > a {
+  width: 9%;
+  font-size: 16px;
+  color: #898989;
+  margin: 10px 0;
+}
+.detail .bao_footer {
+  color: #898989;
+  padding: 0 80px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 15px 0;
+}
