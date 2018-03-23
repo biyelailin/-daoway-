@@ -59,6 +59,11 @@
   top: 0;
   z-index: 100;
 }
+.server .anima {
+  transform: rotateX(360deg);
+  transition: 1s transform ease-in-out;
+  transform-origin: 0 0;
+}
 .server h3 {
   font-size: 18px;
   font-weight: bold;

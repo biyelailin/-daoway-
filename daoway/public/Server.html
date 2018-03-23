@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>商家列表</title>
+  <link rel="shortcut icon" href="http://www.daoway.cn/pcimages/favicon.png">
   <link rel="stylesheet" href="./stylesheets/server.css">
   <link rel="stylesheet" href="./stylesheets/reset.css">
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_596186_ac1yrzpp3qnf80k9.css">
@@ -65,7 +66,6 @@
       <span>热门城市</span>
       <div class="desc1">
 
-
       </div>
 
     </div>
@@ -98,10 +98,7 @@
     $.get('/city',function(data){
       $('.desc1').append(template('footer',{data:data}))
     })
-//通过点击实现加载图片
-/*1.获得所有的数据，要进行判断，第一次显示多少
-*2.点击以后显示第二屏数据
-* */
+
 
 
   })

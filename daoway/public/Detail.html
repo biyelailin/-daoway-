@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>商家详情</title>
+  <link rel="shortcut icon" href="http://www.daoway.cn/pcimages/favicon.png">
   <link rel="stylesheet" href="./stylesheets/reset.css">
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_596186_ac1yrzpp3qnf80k9.css">
   <link rel="stylesheet" href="./stylesheets/detail.css">
   <script type="text/javascript" src="./javascripts/jquery-1.10.1.js"></script>
   <script type="text/javascript" src="./javascripts/template-web.js"></script>
+  <script src="https://cdn.bootcss.com/moment.js/2.21.0/moment.min.js"></script>
 </head>
 <body>
 <div class="detail">
@@ -35,18 +37,7 @@
     </div>
   </div>
   <div class="name">
-    <div class="name_left">
-      <b>云家政</b>
-      <span class="one">营业时间:<span class="time">09:00-18:00</span></span>
-      <span class="two">最近可预约时间：<span class="month">03月21日 09:00</span></span>
-    </div>
-    <div class="htit-right">
-      <ul>
-        <li><i>45594</i>成功接单<span>|</span></li>
-        <li><i>93%</i>接单率<span>|</span></li>
-        <li><i>86%</i>好评率</li>
-      </ul>
-    </div>
+
   </div>
   <div class="list">
     <a href="javascript:;">项目服务</a>
@@ -61,40 +52,13 @@
       </div>
 
       <div class="pingjia">
-        <h3>
-          <span>用户评论</span>
-          <em>(10384条评论)</em>
-        </h3>
-        <div class="conmentss">
-          <img class="touxiang" src="http://img.daoway.cn/img/2018/03/18/126ab617-9abf-4d84-acb1-f1805d2d6236.jpg" width="40" height="40">
-          <ul>
-            <li>言小旭</li>
-            <li>
-                        <span  style="width: 70px; margin-left: 0"><span class="noColor" style="left: 0">
-                           <img src="./images/red_star.png" width="10" >
-                           <img src="./images/red_star.png"  width="10">
-                           <img src="./images/red_star.png" width="10" >
-                           <img src="./images/red_star.png"  width="10" >
-                           <img src="./images/red_star.png"   width="10">
-
-                            </span></span><em style="margin-left: 10px">2018-03-20</em>
-            </li>
-            <li class="commentdetail">准时到达，服务专业，态度热情</li>
-            <li class="commentimg">
-
-            </li>
-
-            <li class="commentposition"><span class="iconfont icon-dizhi"></span>北京  朝阳区</li>
-
-          </ul>
-        </div>
 
       </div>
       <div class="dibu">
       <span class="fenye">
-        <span class="ye">上一页</span>
+        <a href="javascript:;" class="ye up">上一页</a>
         <span class="shuzu ">
-          <a href="javascript:;" class="on">1</a>
+          <a href="javascript:;" id="num_1" class="on">1</a>
           <a href="javascript:;">2</a>
           <a href="javascript:;">3</a>
           <a href="javascript:;">4</a>
@@ -106,7 +70,7 @@
           <a href="javascript:;" style="border:0">...</a>
 
         </span>
-        <span class="ye">下一页</span>
+        <a href="javascript:;" class="ye down">下一页</a>
       </span>
       </div>
 
@@ -147,41 +111,158 @@
 
 </div>
 <script>
-   $(function(){
-        //头部滑动显示
-        // 获取显示的位置
-        var top = $('.container').offset().top
-        console.log(top)
-        //   获取滚动条的高度
-        $(window).scroll(function(){
-        var scrllTop = $(window).scrollTop()
-        if(scrllTop>top ){
-        $(".header").addClass('fix')
-        } else{
-        $(".header").removeClass('fix')
-        }
-        })
+  let page=0;
+   $(function() {
+     //头部滑动显示
+     // 获取显示的位置
+     var top = $('.container').offset().top
+     //   获取滚动条的高度
+     $(window).scroll(function () {
+       var scrllTop = $(window).scrollTop()
+       if (scrllTop > top) {
+         $(".header").addClass('fix')
+       } else {
+         $(".header").removeClass('fix')
+       }
+     })
 
      //    发送item的ajax 请求
-     $.get('/item',{id:"1001"},function(data){
-         $('.aaa').append(template('detail',{data:data}))
+     $.get('/item', {id: "1001"}, function (data) {
+       $('.name').append(template('count', {data: data}))
+       $('.aaa').append(template('detail', {data: data}))
+
      })
 
      //     获取城市
-     $.get('/city',function(data){
-       $('.desc1').append(template('footer1',{list:data}))
+     $.get('/city', function (data) {
+       $('.desc1').append(template('footer1', {list: data}))
      })
 
-// 点击按钮获取数据
-  $.get('/comment',function(data){
-    console.log(data)
-  })
+// 分页器
+           $('.shuzu >a').click(function () {
+             // 取消所有的选中的样式
+             $('.shuzu>a').removeClass('on')
+             //点击谁谁添加
+             $(this).addClass('on')
+//      点击谁怎么获得它的下标呢？
+              page = $(this).index()
+             //     发送ajax请求，获取相应页面的数据
+             $.get('/comment?page='+page ,function(data){
+               BigArr(data)
+               $('.pingjia').html(template('comments', {data: data}))
+             })
+           })
+// 获取上下按钮的
+
+           $('.up').click(function(){
+
+       //得到数值，在进行切换a标签
+             if(page<1){
+                return
+             }else {
+               page--
+               $('.shuzu>a').removeClass('on')
+               var aaa = $('.shuzu>a')[page]
+               $(aaa).addClass('on')
+             }
+             $.get('/comment?page='+page ,function(data){
+               BigArr(data)
+               $('.pingjia').html(template('comments', {data: data}))
+             })
+
+           })
+//     获取下按钮
+     $('.down').click(function(){
+       if(page>7){
+         return
+       }else {
+         page ++
+         //得到数值，在进行切换a标签
+         $('.shuzu>a').removeClass('on')
+         let aaa = $('.shuzu>a')[page]
+         $(aaa).addClass('on')
+       }
+       $.get('/comment?page='+page ,function(data){
+         BigArr(data)
+         $('.pingjia').html(template('comments', {data: data}))
+       })
+
+     })
 
 
 
+     $.get('/comment?page='+page ,function(data){
+       BigArr(data)
+       $('.pingjia').html(template('comments', {data: data}))
+
+     })
+
+//    添加小星星
+      function BigArr(data){
+        for (var i = 0; i < data.length; i++) {
+          let star = data[i].star
+          console.log(star)
+           let bigArr = Star(star)
+          console.log(bigArr)
+          data[i].classStar = bigArr
+        }
+      }
+
+//创建一个显示小星星的函数
+    function Star(count){
+//   创建一个数组
+       let Arr =[]
+      for (var i = 0; i < count; i++) {
+          Arr.push('red_star.png' )
+      }
+//      如果有灰色的话
+       while(Arr.length<5){
+         Arr.push('gray_star.png')
+       }
+       return Arr
+    }
 
    })
+  // 过滤器
+      template.defaults.imports.dateFormat = function(data, format){
+        return moment(data).format(format)
+        }
+
 </script>
+<script type="text/html" id="comments">
+  <h3>
+    <span>用户评论</span>
+    <em>(10384条评论)</em>
+  </h3>
+  {{each data}}
+  <div class="conmentss">
+    <img class="touxiang" src={{$value.iconUrl}} width="40" height="40">
+    <ul>
+      <li>{{$value.nick}}</li>
+      <li>
+
+      <span  style="width: 70px; margin-left: 0">
+          <span class="noColor" style="left: 0">
+           {{each $value.classStar}}
+           <img src="./images/{{$value}}"  width="10" >
+            {{/each}}
+            </span>
+        </span>
+        <span style="margin-left: 10px">{{$value.createtime  | dateFormat "YYYY-MM-DD"}}</span>
+      </li>
+      <li class="commentdetail">{{$value.comment}}</li>
+      <li class="commentimg">
+
+      </li>
+
+      <li class="commentposition"><span class="iconfont icon-dizhi"></span>{{$value.area}}  {{$value.city}}</li>
+
+    </ul>
+  </div>
+  {{/each}}
+
+</script>
+
 <script type="text/html" id="detail">
   <div class="one">
     <h3><span>服务项目</span></h3>
@@ -221,6 +302,21 @@
 
 
 
+</script>
+
+<script type="text/html" id="count">
+  <div class="name_left">
+    <b>{{data[0].title}}</b>
+    <span class="one">营业时间:<span class="time">09:00-18:00</span></span>
+    <span class="two">最近可预约时间：<span class="month">03月21日 09:00</span></span>
+  </div>
+  <div class="htit-right">
+    <ul>
+      <li><i>{{data[0].orderCount}}</i>成功接单<span>|</span></li>
+      <li><i>{{data[0].accept}}</i>接单率<span>|</span></li>
+      <li><i>{{data[0].praise}}</i>好评率</li>
+    </ul>
+  </div>
 </script>
 </body>
 </html>
